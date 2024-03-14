@@ -13,8 +13,8 @@
 //   }
 // }
 // // console.log(obj.c)
-// const arr = {a:3,b:4}
-// console.log(Reflect.get(obj, 'c', arr)) // get方法内部的this指向obj
+// const newObj = {a:3,b:4}
+// console.log(Reflect.get(obj, 'c', newObj)) // get方法内部的this指向newObj
 
 
 const obj = {
