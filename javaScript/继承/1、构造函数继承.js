@@ -17,7 +17,7 @@ Parent.prototype.a = "我是父类prototype上的属性"
 function Child(){
   Parent.call(this)
 }
-
+Child.prototype.b = "我是子类prototype上的属性"
 var child1 = new Child()
 var child2 = new Child()
 console.log("child1与child2是否相等", child1.color === child2.color)
@@ -25,3 +25,4 @@ console.log("child1与child2是否相等", child1.color === child2.color)
 // 改变实例1的color
 child1.color.pop()
 console.log(child1.color,child2.color)
+console.log("child1的原型", child1.b)
