@@ -22,7 +22,8 @@ class SuperTask{
     if(this.runTaskCount < this.max && this.taskQueue.length){
       const {taskFn, resolve, reject} = this.taskQueue.shift()
       this.runTaskCount++
-      Promise.resolve(taskFn()).then(resolve, reject).finally(() =>{ // 避免不是promise
+      // 避免不是promise对象的情况，用Promise.resolve包裹一下
+      Promise.resolve(taskFn()).then(resolve, reject).finally(() =>{
         this.runTaskCount--
         this.#run()
       })
