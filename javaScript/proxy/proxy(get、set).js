@@ -14,4 +14,5 @@ const handler = {
 const a = { b:"1",c:{d:"2",e:"3"}}
 const p = new Proxy(a, handler);
 // proxy不能深层代理
-console.log(p.c.d)
+// console.log(p.c.d)
+p.c.d = 3

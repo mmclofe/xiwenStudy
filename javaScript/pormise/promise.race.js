@@ -10,7 +10,7 @@ Promise.myRace= function(iterable) {
     Promise.resolve(item).then(resolve,reject)
   }
   if(i === 0){
-    resolve()
+    resolve([])
   }
   return p
 }

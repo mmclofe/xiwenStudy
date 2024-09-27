@@ -1,10 +1,10 @@
 // 完成构造函数superTask，使其实现以下代码输出
 function timeout(time) {
- return new Promise((resolve, reject) => {
-  setTimeout(() => {
-    resolve()
-  }, time)
- })
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      resolve()
+    }, time)
+  })
 }
 class SuperTask{
   constructor(max=2){
